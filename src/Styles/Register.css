@@ -1,0 +1,23 @@
+*{
+    
+}
+.form-container{
+    background-image: url("../../../assets/barber.jpg");
+    font-size:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    border: 1px solid white;
+}
+
+label{
+    color: white;
+}
+
+.reg-form{
+    border: 2px solid white;
+    width: 40%;
+    padding: 30px;
+    background-color: white;
+}
