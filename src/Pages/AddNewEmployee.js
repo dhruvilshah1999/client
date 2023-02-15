@@ -7,14 +7,7 @@ const AddNewEmployee = () => {
   const [salary, setSalary] = useState("");
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    // Here you can send the data to the backend to create a new employee
-    console.log({ name, email, position, salary });
-    // Reset the form fields
-    setName("");
-    setEmail("");
-    setPosition("");
-    setSalary("");
+
   };
 
   return (

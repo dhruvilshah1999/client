@@ -26,30 +26,7 @@ const LoginIn = () => {
     }
   }
 
-    //form handler
-    const onfinishHandler = async (values) => {
-      var email = ValidateEmail(values.email);
-      // if(email === true){
-        try {
-          dispatch(showLoading());
-          const res = await axios.post("/api/v1/user/login", values); 
-          window.location.reload();
-          dispatch(hideLoading());
-          if (res.data.success) {
-            console.log("Token",res.data.token);
-            localStorage.setItem("token", res.data.token);
-            message.success("Loged In Successfully!");
-            navigate("/homepage");
-          } else {
-            message.error(res.data.message);
-          }
-        } catch (error) {
-          dispatch(hideLoading());
-          console.log(error);
-          message.error("Something Went Wrong");
-        }
-      // }
-    };
+ 
 
   return (
     <div className="container">
