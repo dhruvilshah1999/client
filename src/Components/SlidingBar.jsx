@@ -5,6 +5,7 @@ import { UilSignOutAlt } from "@iconscout/react-unicons";
 import { SidebarData } from "../TempData/Data.js";
 import { UilBars } from "@iconscout/react-unicons";
 import {motion} from 'framer-motion'
+import { Link, useNavigate } from "react-router-dom";
 
 
 const SlidingBar = () => {
@@ -52,9 +53,11 @@ const SlidingBar = () => {
           );
         })} {/* Here Add the Contents */}
         {/* signoutIcon */}
-        <div className="menuItem">
-          <UilSignOutAlt />
-        </div>
+        {/* <div className="menuItem"> */}
+        <Link to='/login' className='menuItem'>
+          <UilSignOutAlt href="/login" className="menu-logout"/>Log Out
+          </Link>
+        {/* </div> */}
       </div>
     </motion.div>
     </>

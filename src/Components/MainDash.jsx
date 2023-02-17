@@ -1,12 +1,12 @@
 import React from "react";
-// import Cards from "../Cards/Cards";
+import Cards from '../Components/Cards'
 import Table from "../Components/Table";
 import "../Styles/MainDash.css";
 const MainDash = () => {
   return (
     <div className="MainDash">
       <h1>Dashboard</h1>
-      {/* <Cards /> */}
+      <Cards />
       <Table />
     </div>
   );

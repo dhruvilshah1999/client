@@ -41,10 +41,10 @@ import {
   // Analytics Cards Data
   export const cardsData = [
     {
-      title: "Sales",
+      title: "Customer Sales",
       color: {
-        backGround: "linear-gradient(180deg, #bb67ff 0%, #c484f3 100%)",
-        boxShadow: "0px 10px 20px 0px #e0c6f5",
+        backGround: "linear-gradient(180deg, #bd6060 0%, #652929 100%)",
+        boxShadow: "0px 10px 20px 0px #973e3e",
       },
       barValue: 70,
       value: "25,970",
@@ -57,23 +57,7 @@ import {
       ],
     },
     {
-      title: "Revenue",
-      color: {
-        backGround: "linear-gradient(180deg, #FF919D 0%, #FC929D 100%)",
-        boxShadow: "0px 10px 20px 0px #FDC0C7",
-      },
-      barValue: 80,
-      value: "14,270",
-      png: UilMoneyWithdrawal,
-      series: [
-        {
-          name: "Revenue",
-          data: [10, 100, 50, 70, 80, 30, 40],
-        },
-      ],
-    },
-    {
-      title: "Expenses",
+      title: "Inventory Sales",
       color: {
         backGround:
           "linear-gradient(rgb(248, 212, 154) -146.42%, rgb(255 202 113) -46.42%)",
@@ -89,26 +73,42 @@ import {
         },
       ],
     },
+    {
+      title: "Today's Revenue",
+      color: {
+        backGround: "linear-gradient(180deg, #F1AA66 0%, #EC8E33 100%)",
+        boxShadow: "0px 10px 20px 0px #EE9C4D",
+      },
+      barValue: 80,
+      value: "14,270",
+      png: UilMoneyWithdrawal,
+      series: [
+        {
+          name: "Revenue",
+          data: [10, 100, 50, 70, 80, 30, 40],
+        },
+      ],
+    },
   ];
   
   // Recent Update Card Data
   export const UpdatesData = [
     {
       img: img1,
-      name: "Andrew Thomas",
-      noti: "has ordered Apple smart watch 2500mh battery.",
-      time: "25 seconds ago",
+      name: "Barber 1",
+      noti: "has Customer 1 Appointment.",
+      time: "3:30 PM - 17/02/2023",
     },
     {
       img: img2,
-      name: "James Bond",
-      noti: "has received Samsung gadget for charging battery.",
-      time: "30 minutes ago",
+      name: "Barber 2",
+      noti: "has Customer 2 Appointment.",
+      time: "9:30 AM - 17/02/2023",
     },
     {
       img: img3,
-      name: "Iron Man",
-      noti: "has ordered Apple smart watch, samsung Gear 2500mh battery.",
-      time: "2 hours ago",
+      name: "Barber 3",
+      noti: "has Customer 3 Appointment.",
+      time: "7:30 PM - 17/02/2023",
     },
   ];

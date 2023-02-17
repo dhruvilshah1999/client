@@ -37,7 +37,7 @@ const LoginIn = () => {
             {/* <Form.Item className='Textfields' label="Confirm Password" name="cpwd">
                 <Input type="password" required/>
             </Form.Item> */}
-            <Link to='/register' className='m-2'>Not a User</Link>
+            <Link to='/' className='m-2'>Not a User</Link>
             <button className='btn btn-primary' type='submit'>Log In</button>
         </Form>
     </div>
