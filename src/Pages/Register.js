@@ -85,7 +85,8 @@ const Register = () => {
             <Input className='input' type="password" placeholder="Password" required/>
           </Form.Item>
 
-          
+          <p><a href='/login'>Already User Login Here</a></p>
+          <button>Submit</button>
         </Form>
       </div>
     </div>
