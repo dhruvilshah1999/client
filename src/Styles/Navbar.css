@@ -1,0 +1,89 @@
+.admin-navbar {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navbar-left {
+    flex: 1;
+  }
+  
+  .logo-text {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .notification-icon {
+    color: rgb(240, 13, 13);
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .notification-icon i {
+    display: block;
+  }
+  
+  .logout-button {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #444;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media only screen and (max-width: 767px) {
+    .navbar-left,
+    .navbar-right {
+      flex-basis: 100%;
+    }
+  
+    .navbar-right {
+      justify-content: space-between;
+    }
+  
+    .notification-icon {
+      margin-right: 0;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .logo-text {
+      font-size: 20px;
+    }
+  
+    .notification-icon {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  
+    .logout-button {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .logo-text {
+      font-size: 22px;
+    }
+  }
+  
