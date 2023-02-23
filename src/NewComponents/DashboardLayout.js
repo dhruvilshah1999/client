@@ -6,7 +6,17 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge, message } from "antd";
 
-
+const Layout = ({ children }) => {
+    const { user } = useSelector((state) => state.user);
+    console.log("Dashboard User Result", user);
+    const location = useLocation();
+    const navigate = useNavigate();
+    // logout funtion
+    const handleLogout = () => {
+        localStorage.clear();
+        message.success("Logout Successfully");
+        navigate("/login");
+    };
 
     // redering menu list
     const SidebarMenu = user?.isAdmin ? adminMenu : userMenu;
