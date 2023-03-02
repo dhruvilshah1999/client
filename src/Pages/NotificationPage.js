@@ -41,29 +41,7 @@ const NotificationPage = () => {
 
   // delete notifications
   const handleDeleteAllRead = async () => {
-    try {
-      dispatch(showLoading());
-      const res = await axios.post(
-        "/api/v1/user/delete-all-notification",
-        { userId: user._id },
-        {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("token")}`,
-          },
-        }
-      );
-      window.location.reload();
-      dispatch(hideLoading());
-      if (res.data.success) {
-        message.success(res.data.message);
-      } else {
-        message.error(res.data.message);
-      }
-    } catch (error) {
-      dispatch(hideLoading());
-      console.log(error);
-      message.error("Somthing Went Wrong In Notification");
-    }
+    
   };
   return (
     <DasboardLayout>
