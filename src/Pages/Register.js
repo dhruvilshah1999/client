@@ -3,6 +3,9 @@ import "../Styles/Register.css";
 import { Form, Input, message } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import logo from '../assets/Register.jpg'
+
+
 const Register = () => {
     const navigate = useNavigate();
 
@@ -22,27 +25,36 @@ const Register = () => {
       }
     };
   return (
-    <>
-        <div className='form-container'>
-            <Form layout='vertical' onFinish={onfinishHandler} className='reg-form'> 
-                <h1>Admin Register Page</h1>
-                <Form.Item className='Textfields' label="Name" name="name">
-                    <Input type="text" required/>
-                </Form.Item>
-                <Form.Item className='Textfields' label="Email" name="email">
-                    <Input type="email" required/>
-                </Form.Item>
-                <Form.Item className='Textfields' label="Password" name="password">
-                    <Input type="password" required/>
-                </Form.Item>
-                {/* <Form.Item className='Textfields' label="Confirm Password" name="cpwd">
-                    <Input type="password" required/>
-                </Form.Item> */}
-                <Link to='/login' className='m-2'>Already User Login here</Link>
-                <button className='btn btn-primary' type='submit'>Register</button>
-            </Form>
-        </div>
-    </>
+    <div className="container">
+      <div className='pic'>
+        <img src={logo}/>
+      </div>
+      <div className="login">
+        <Form className="form" onFinish={onfinishHandler}>
+          <h1 className="form-h1">Admin Registration</h1>
+          <hr />
+          <p className="form-p">B.I.A.S - Leave the Everything to Us</p>
+
+          <label className='form-label'>Name</label>
+          <Form.Item name="name">
+            <Input className='input' type="text" placeholder="Name" required/>
+          </Form.Item>
+
+          <label className='form-label'>Email-Id</label>
+          <Form.Item name="email">
+            <Input className='input' type="email" required/>
+          </Form.Item>
+
+          <label className='form-label'>Password</label>
+          <Form.Item name="password">
+            <Input className='input' type="password" placeholder="Password" required/>
+          </Form.Item>
+
+          <p><a href='/login'>Already User Login Here</a></p>
+          <button>Submit</button>
+        </Form>
+      </div>
+    </div>
   );
 };
 

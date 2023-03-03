@@ -1,8 +1,9 @@
 import React from 'react'
-import '../Styles/Register.css'
+import '../Styles/Login.css'
 import { Form, Input, message } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import logo from '../assets/Login.jpg'
 
 const LoginIn = () => {
 
@@ -25,21 +26,29 @@ const LoginIn = () => {
     };
 
   return (
-    <div className='form-container'>
-        <Form layout='vertical' onFinish={onfinishHandler} className='reg-form'>
-            <h1>Admin Login Page</h1>
-            <Form.Item className='Textfields' label="Email" name="email">
-                <Input type="email" required/>
-            </Form.Item>
-            <Form.Item className='Textfields' label="Password" name="password">
-                <Input type="password" required/>
-            </Form.Item>
-            {/* <Form.Item className='Textfields' label="Confirm Password" name="cpwd">
-                <Input type="password" required/>
-            </Form.Item> */}
-            <Link to='/' className='m-2'>Not a User</Link>
-            <button className='btn btn-primary' type='submit'>Log In</button>
+    <div className="container">
+      <div className="login">
+        <Form className="form" onFinish={onfinishHandler}>
+          <h1 className="form-h1">Admin Login</h1>
+          <hr />
+          <p className="form-p">B.I.A.S - Leave the Everything to Us</p>
+          <label className='form-label'>Email</label>
+          <Form.Item name="email">
+            <Input className='input' type="text" placeholder="Email" />
+          </Form.Item>
+          
+          <label className='form-label'>Password</label>
+          <Form.Item name="password">
+            <Input className='input' type="password" placeholder="Password" />
+          </Form.Item>
+          <p><a href='/'>Not a User</a></p>
+          <button>Submit</button>
+          <p><a href="#">Forgot Password?</a></p>
         </Form>
+      </div>
+      <div className='pic'>
+        <img src={logo}/>
+      </div>
     </div>
   )
 }

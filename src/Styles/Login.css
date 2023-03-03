@@ -1,6 +1,6 @@
 .container {
     width: 1000px;
-    height: 615px;
+    height: 550px;
     margin: 30px auto;
     display: flex;
     background: rgb(214, 214, 214);
@@ -75,7 +75,6 @@
   }
   hr {
     border-top: 2px solid purple;
-    width: 124%;
   }
   .pic {
     width: 75%;
@@ -83,8 +82,8 @@
     
   }
   .pic img {
-    width: 595px;
-    margin: 10px 0 0 0;
+    width: 540px;
+    margin: 5px 0 0 38px;
     border-radius: 15px;
     
   }
