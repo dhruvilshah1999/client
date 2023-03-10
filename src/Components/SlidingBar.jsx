@@ -48,7 +48,7 @@ const SlidingBar = () => {
               onClick={() => setSelected(index)}
             >
               <item.icon />
-              <span>{item.heading}</span>
+              <Link to={item.link} /><span>{item.heading}</span>
             </div>
           );
         })} {/* Here Add the Contents */}

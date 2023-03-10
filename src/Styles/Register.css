@@ -74,8 +74,8 @@
     color: rgb(144, 38, 193);
   }
   hr {
-    border-top: 2px solid purple;
-    width: 124%;
+    border-top: 3px solid purple;
+    width: 100%;
   }
   .pic {
     width: 75%;

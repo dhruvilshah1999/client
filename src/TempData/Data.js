@@ -16,6 +16,9 @@ import {
   import img1 from "../assets/img1.png";
   import img2 from "../assets/img2.png";
   import img3 from "../assets/img3.png"; 
+
+  // Import Paths
+  import employee from "../Pages/AddNewEmployee"
   
   // Sidebar Data
   export const SidebarData = [
@@ -34,7 +37,8 @@ import {
     },
     {
       icon: UilChart,
-      heading: 'Analytics'
+      heading: 'Employee',
+      link: '/employee'
     },
   ];
   

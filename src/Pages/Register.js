@@ -3,26 +3,61 @@ import "../Styles/Register.css";
 import { Form, Input, message } from "antd";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { showLoading, hideLoading } from "../redux/features/alertSlice";
 import logo from '../assets/Register.jpg'
 
 
 const Register = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    //Email Verification
+    function ValidateEmail(email) {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      if (email.match(mailformat)) {
+  
+        return true;
+      }
+      else {
+        alert("You have entered an invalid email address fromat!");
+        return false;
+      }
+    }
+
+    // Password Verification
+    function CheckPassword(pwd) {
+      var passw = /^[A-Za-z]\w{7,14}$/;
+      if (pwd.match(passw)) {
+        return true;
+      }
+      else {
+        alert('You have entered an invalid password format!')
+        return false;
+      }
+    }
 
     //form handler
     const onfinishHandler = async (values) => {
-      try {
-        const res = await axios.post("/api/v1/user/register", values);
-        if (res.data.success) {
-          message.success("Register Successfully!");
-          navigate("/login");
-        } else {
-          message.error(res.data.message);
+      var email = ValidateEmail(values.email);
+      var pwd = CheckPassword(values.password);
+      if(email === true && pwd === true){
+        try {
+          dispatch(showLoading());
+          const res = await axios.post("/api/v1/user/register", values);
+          dispatch(hideLoading());
+          if (res.data.success) {
+            message.success("Register Successfully!");
+            navigate("/login");
+          } else {
+            message.error(res.data.message);
+          }
+        } catch (error) {
+          dispatch(hideLoading());
+          console.log(error);
+          message.error("Something Went Wrong");
         }
-      } catch (error) {
-        console.log(error);
-        message.error("Something Went Wrong");
-      }
+     }
     };
   return (
     <div className="container">
