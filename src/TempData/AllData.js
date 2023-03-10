@@ -11,7 +11,7 @@ export const userMenu = [
     },
     {
         name: "Create Users",
-        path: "/create-employee",
+        path: "/create-users",
         icon: "fa-sharp fa-solid fa-users",
     },
     {

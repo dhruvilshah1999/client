@@ -55,7 +55,7 @@ const LoginIn = () => {
     <div className="container">
       <div className="login">
         <Form className="form" onFinish={onfinishHandler}>
-          <h1 className="form-h1">Admin Login</h1>
+          <h1 className="form-h1">Login</h1>
           <hr />
           <p className="form-p">B.I.A.S - Leave the Everything to Us</p>
           

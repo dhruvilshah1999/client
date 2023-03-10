@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { showLoading, hideLoading } from '../redux/features/alertSlice';
 import axios from "axios";
 
-const CreateEmployee = () => {
+const AddAppointment = () => {
     const { user } = useSelector((state) => state.user);
 
     const dispatch = useDispatch();
@@ -16,8 +16,8 @@ const CreateEmployee = () => {
       try {
         dispatch(showLoading());
         const res = await axios.post(
-          "/api/v1/user/create-employee",
-          { ...values, userId: user._id },
+          "/api/v1/user/create-appointment",
+          { ...values, appointmentCreatorId: user._id },
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -40,9 +40,9 @@ const CreateEmployee = () => {
     };
     return (
       <DasboardLayout>
-        <h1 className="text-center">Add New Employee</h1>
+        <h1 className="text-center">Add Appointment</h1>
         <Form layout="vertical" onFinish={handleFinish} className="m-3">
-          <h4 className="">Personal Details : </h4>
+          <h4 className="">User Details</h4>
           <Row gutter={20}>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
@@ -51,7 +51,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your first name" />
+                <Input type="text" placeholder="Users first name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -61,7 +61,37 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your last name" />
+                <Input type="text" placeholder="Users last name" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={24} lg={8}>
+              <Form.Item
+                label="Birth Date"
+                name="date"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input type="date" placeholder="Users Birth Date" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={24} lg={8}>
+              <Form.Item
+                label="Age"
+                name="age"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input type="text" placeholder="Users Age" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={24} lg={8}>
+              <Form.Item
+                label="Gender"
+                name="gender"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input type="text" placeholder="User Gender" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -71,7 +101,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your contact no" />
+                <Input type="text" placeholder="Users contact no" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -81,7 +111,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="email" placeholder="your email address" />
+                <Input type="email" placeholder="Users email address" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -91,44 +121,74 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your clinic address" />
+                <Input type="text" placeholder="Users address" />
               </Form.Item>
             </Col>
           </Row>
-          <h4>Professional Details :</h4>
+          <h4>Employee Details:</h4>
           <Row gutter={20}>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
-                label="Specialization"
-                name="specialization"
+                label="First Name"
+                name="empFirstName"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your specialization" />
+                <Input type="text" placeholder="Employee First Name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
-                label="Experience"
-                name="experience"
+                label="Last Name"
+                name="empLastName"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your experience" />
+                <Input type="text" placeholder="Employee Last Name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
-                label="Salary Per Hour"
-                name="salaryPerHour"
+                label="Contact Number"
+                name="empCntNum"
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your contact no" />
+                <Input type="text" placeholder="Employee Contact Numbero" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
-              <Form.Item label="Timings" name="timings" required>
+              <Form.Item
+                label="Service Category"
+                name="serviceCategory"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input type="text" placeholder="Enter Service Category" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={24} lg={8}>
+              <Form.Item
+                label="Service Name"
+                name="serviceName"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input type="text" placeholder="Enter Service Name" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={24} lg={8}>
+              <Form.Item
+                label="Price"
+                name="price"
+                required
+                rules={[{ required: true }]}
+              >
+                <Input type="text" placeholder="Enter The Final Price" />
+              </Form.Item>
+            </Col>
+            <Col xs={24} md={24} lg={8}>
+              <Form.Item label="Booking Timings" name="bookingTimings" required>
                 <TimePicker.RangePicker format="HH:mm" />
               </Form.Item>
             </Col>
@@ -144,4 +204,4 @@ const CreateEmployee = () => {
     );
 }
 
-export default CreateEmployee
+export default AddAppointment

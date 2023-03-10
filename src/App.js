@@ -11,6 +11,9 @@ import Spinner from "./NewComponents/Spinner";
 import ProtectedRoute from './NewComponents/ProtectedRoute';
 import PublicRoute from './NewComponents/PublicRoute';
 import CreateEmployee from './Pages/CreateEmployee';
+import CreateUser from './Pages/CreateUser';
+import AddAppointment from './Pages/AddAppointment';
+import NotificationPage from './Pages/NotificationPage';
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -50,6 +53,24 @@ function App() {
           <Route path='/create-employee' element={
             <ProtectedRoute>
               <CreateEmployee/>
+            </ProtectedRoute>
+          }/>
+
+          <Route path='/create-users' element={
+            <ProtectedRoute>
+              <CreateUser/>
+            </ProtectedRoute>
+          }/>
+
+          <Route path='/appointments' element={
+            <ProtectedRoute>
+              <AddAppointment/>
+            </ProtectedRoute>
+          }/>
+
+          <Route path='/notification' element={
+            <ProtectedRoute>
+              <NotificationPage/>
             </ProtectedRoute>
           }/>
 
