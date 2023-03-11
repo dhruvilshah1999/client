@@ -7,13 +7,7 @@ import '../Styles/Homepage.css'
 
 const HomePage = () => {
   return (
-    <div className="App">
-      <div className="AppGlass">
-        <SlidingBar/>
-        <MainDash/>
-        <RightPart/>
-      </div>
-    </div>
+    
   );
 }
 
