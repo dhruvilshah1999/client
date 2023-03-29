@@ -51,7 +51,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your first name" />
+                <Input type="text" placeholder="employee first name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -61,7 +61,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your last name" />
+                <Input type="text" placeholder="employee last name" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -71,7 +71,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your contact no" />
+                <Input type="text" placeholder="employee contact no" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -81,7 +81,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="email" placeholder="your email address" />
+                <Input type="email" placeholder="employee email address" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -91,7 +91,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your clinic address" />
+                <Input type="text" placeholder="employee address" />
               </Form.Item>
             </Col>
           </Row>
@@ -104,7 +104,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your specialization" />
+                <Input type="text" placeholder="employee specialization" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -114,7 +114,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your experience" />
+                <Input type="text" placeholder="employee experience" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>
@@ -124,7 +124,7 @@ const CreateEmployee = () => {
                 required
                 rules={[{ required: true }]}
               >
-                <Input type="text" placeholder="your contact no" />
+                <Input type="text" placeholder="employee contact no" />
               </Form.Item>
             </Col>
             <Col xs={24} md={24} lg={8}>

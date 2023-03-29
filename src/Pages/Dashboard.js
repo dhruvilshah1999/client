@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import DasboardLayout from '../NewComponents/DashboardLayout'
-
+import UpCommingAppointment from "../NewComponents/UpCommingAppointment/UpCommingAppointment";
+import SalesChart from "../NewComponents/SalesChart/SalesChart";
+import {userData} from "../TempData/DummyData";
 const Dashboard = () => {
     // login user data
     const getAdminData = async () => {
@@ -25,7 +27,12 @@ const Dashboard = () => {
     }, []);
     return (
         <DasboardLayout>
-            <h1>Dashboard</h1>
+            <div className="home">
+            <SalesChart data={userData} title="User Analytics" grid dataKey="Active User"/>
+                <div className="homeWidgets">
+                    <UpCommingAppointment/>
+                </div>
+            </div>
         </DasboardLayout>
     );
 };

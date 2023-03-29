@@ -10,11 +10,6 @@ export const userMenu = [
         icon: "fa-solid fa-list",
     },
     {
-        name: "Create Users",
-        path: "/create-users",
-        icon: "fa-sharp fa-solid fa-users",
-    },
-    {
         name: "Inventory",
         path: "/inventory",
         icon: "fa-solid fa-warehouse",
@@ -53,5 +48,28 @@ export const adminMenu = [
         path: "/inventory",
         icon: "fa-solid fa-warehouse",
     },
+];
 
+// Employee menu
+export const employeeMenu = [
+    {
+        name: "Home",
+        path: "/",
+        icon: "fa-solid fa-house",
+    },
+    {
+        name: "Appointments",
+        path: "/appointments",
+        icon: "fa-solid fa-list",
+    },
+    {
+        name: "Users",
+        path: "/create-users",
+        icon: "fa-sharp fa-solid fa-users",
+    },
+    {
+        name: "Inventory",
+        path: "/inventory",
+        icon: "fa-solid fa-warehouse",
+    },
 ];

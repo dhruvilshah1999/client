@@ -14,6 +14,8 @@ import CreateEmployee from './Pages/CreateEmployee';
 import CreateUser from './Pages/CreateUser';
 import AddAppointment from './Pages/AddAppointment';
 import NotificationPage from './Pages/NotificationPage';
+import DisplayEmployee from './Pages/Admin/DisplayEmployee';
+import DisplayUsers from './Pages/Admin/DisplayUsers';
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -74,7 +76,18 @@ function App() {
             </ProtectedRoute>
           }/>
 
-          <Route path='/employee' element={<AddNewEmployee/>}/>
+          <Route path='/employees' element={
+            <ProtectedRoute>
+              <DisplayEmployee/>
+            </ProtectedRoute>
+          }/>
+
+          <Route path='/users' element={
+            <ProtectedRoute>
+              <DisplayUsers/>
+            </ProtectedRoute>
+          }/>
+
         </Routes>
         )}
       </BrowserRouter>
