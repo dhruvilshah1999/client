@@ -43,19 +43,19 @@ const DisplayEmployee = () => {
         title: "phone",
         dataIndex: "phone",
       },
-      // {
-      //   title: "Actions",
-      //   dataIndex: "actions",
-      //   render: (text, record) => (
-      //     <div className="d-flex">
-      //       {record.status === "valid" ? (
-      //         <button className="btn btn-success">Valid Employee</button>
-      //       ) : (
-      //         <button className="btn btn-danger">Invalid Employee</button>
-      //       )}
-      //     </div>
-      //   ),
-      // },
+      {
+        title: "Actions",
+        dataIndex: "actions",
+        render: (text, record) => (
+          <div className="d-flex">
+            {record.status === "valid" ? (
+              <button className="btn btn-success">Valid Employee</button>
+            ) : (
+              <button className="btn btn-danger">Invalid Employee</button>
+            )}
+          </div>
+        ),
+      },
     ];
 
   return (

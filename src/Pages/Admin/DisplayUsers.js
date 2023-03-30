@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DashboardLayout from '../../NewComponents/DashboardLayout'
 import axios from "axios";
-import { Table } from "antd";
+import { Table, Pagination } from "antd";
 
 const DisplayUsers = () => {
 

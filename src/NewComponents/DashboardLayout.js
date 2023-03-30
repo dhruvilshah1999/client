@@ -1,6 +1,6 @@
 import React from "react";
 import '../Styles/DashboardLayout.css';
-import { userMenu, adminMenu } from '../TempData/AllData';
+import { userMenu, adminMenu, employeeMenu } from '../TempData/AllData';
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -19,7 +19,13 @@ const Layout = ({ children }) => {
     };
 
     // redering menu list
-    const SidebarMenu = user?.isAdmin ? adminMenu : userMenu;
+    // const SidebarMenu = user?.isAdmin ? adminMenu : userMenu;
+    const SidebarMenu = user?.isAdmin
+    ? adminMenu
+    : user?.isEmployee
+      ? employeeMenu
+      : userMenu;
+
     return (
         <>
             <div className="main">

@@ -16,6 +16,7 @@ import AddAppointment from './Pages/AddAppointment';
 import NotificationPage from './Pages/NotificationPage';
 import DisplayEmployee from './Pages/Admin/DisplayEmployee';
 import DisplayUsers from './Pages/Admin/DisplayUsers';
+import CreateInventory from './Pages/CreateInventory';
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -67,6 +68,12 @@ function App() {
           <Route path='/appointments' element={
             <ProtectedRoute>
               <AddAppointment/>
+            </ProtectedRoute>
+          }/>
+
+          <Route path='/inventory' element={
+            <ProtectedRoute>
+              <CreateInventory/>
             </ProtectedRoute>
           }/>
 

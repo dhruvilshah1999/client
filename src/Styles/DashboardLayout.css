@@ -82,3 +82,6 @@
     margin: 0 10px;
     text-transform: uppercase;
   }
+  .content-control{
+    overflow: hidden;
+  }
