@@ -57,7 +57,7 @@ const LoginIn = () => {
         <Form className="form" onFinish={onfinishHandler}>
           <h1 className="form-h1">Login</h1>
           <hr />
-          <p className="form-p">B.I.A.S - Leave the Everything to Us</p>
+          <p className="form-p">B.I.A.S - Leave everything to us</p>
           
           <label className='form-label'>Email</label>
           <Form.Item name="email">

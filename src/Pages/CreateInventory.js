@@ -98,7 +98,7 @@ const CreateInventory = () => {
           <Row gutter={20}>
             <Col xs={24} md={24} lg={8}>
               <Form.Item
-                label="Delears First Name"
+                label="Dealears First Name"
                 name="dealersFName"
                 required
                 rules={[{ required: true }]}
